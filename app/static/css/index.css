@@ -1,4 +1,4 @@
-/* body {
+body {
     background-color: #C0C0C0;
 }
 
@@ -9,10 +9,8 @@ nav,
     transition: all 0.5s;
     -webkit-transition: all 0.5s;
     /* Safari 3.1 to 6.0 */
-
-
 }
+
 .badge {
     font-size: 1em;
 }
-*/
