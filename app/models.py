@@ -90,35 +90,35 @@ class Pitch(db.Model):
         db.session.add(self)
         db.session.commit()
 
-#     @classmethod
-#     def get_pitches(cls,category):
-#         pitches = Pitch.query.filter_by(category=category).all()
-#         return pitches
+    @classmethod
+    def get_pitches(cls,category):
+        pitches = Pitch.query.filter_by(category=category).all()
+        return pitches
 
-#     @classmethod
-#     def get_pitch(cls,id):
-#         pitch = Pitch.query.filter_by(id=id).first()
+    @classmethod
+    def get_pitch(cls,id):
+        pitch = Pitch.query.filter_by(id=id).first()
 
-#         return pitch
+        return pitch
 
-#     @classmethod
-#     def count_pitches(cls,uname):
-#         user = User.query.filter_by(username=uname).first()
-#         pitches = Pitch.query.filter_by(user_id=user.id).all()
+    @classmethod
+    def count_pitches(cls,uname):
+        user = User.query.filter_by(username=uname).first()
+        pitches = Pitch.query.filter_by(user_id=user.id).all()
 
-#         pitches_count = 0
-#         for pitch in pitches:
-#             pitches_count += 1
+        pitches_count = 0
+        for pitch in pitches:
+            pitches_count += 1
 
-#         return pitches_count
+        return pitches_count
 
-#     def get_comments(self):
-#         """
-#         Method that retrieves a pitch's comments.
-#         """
-#         pitch = Pitch.query.filter_by(id = self.id).first()
-#         comments = Comment.query.filter_by(pitch_id = pitch.id).all()
-#         return comments
+    def get_comments(self):
+        """
+        Method that retrieves a pitch's comments.
+        """
+        pitch = Pitch.query.filter_by(id = self.id).first()
+        comments = Comment.query.filter_by(pitch_id = pitch.id).all()
+        return comments
 
 # class Comment(db.Model):
 #     """
