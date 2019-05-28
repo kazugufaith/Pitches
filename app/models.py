@@ -64,24 +64,24 @@ class User(UserMixin, db.Model):
         """
         return f'User {self.username}'
 
-# class Pitch(db.Model):
-#     """
-#     Pitch model class to create pitches.
+class Pitch(db.Model):
+    """
+    Pitch model class to create pitches.
 
-#     Args:
-#         db.Model - connects our class to the database.
-#     """
-#     __tablename__ = 'pitches'
+    Args:
+        db.Model - connects our class to the database.
+    """
+    __tablename__ = 'pitches'
 
-#     id = db.Column(db.Integer, primary_key = True)
-#     title = db.Column(db.String(255))
-#     description = db.Column(db.String(700))
-#     category = db.Column(db.String)
-#     posted = db.Column(db.DateTime, default=datetime.utcnow)
-#     upvotes = db.Column(db.Integer)
-#     downvotes = db.Column(db.Integer)
-#     user_id = db.Column(db.Integer, db.ForeignKey('users.id'))
-#     comments = db.relationship('Comment', backref = 'pitch', lazy = 'dynamic')
+    id = db.Column(db.Integer, primary_key = True)
+    title = db.Column(db.String(255))
+    description = db.Column(db.String(700))
+    category = db.Column(db.String)
+    posted = db.Column(db.DateTime, default=datetime.utcnow)
+    upvotes = db.Column(db.Integer)
+    downvotes = db.Column(db.Integer)
+    user_id = db.Column(db.Integer, db.ForeignKey('users.id'))
+    comments = db.relationship('Comment', backref = 'pitch', lazy = 'dynamic')
 
 #     def save_pitch(self):
 #         """
