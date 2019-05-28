@@ -83,12 +83,12 @@ class Pitch(db.Model):
     user_id = db.Column(db.Integer, db.ForeignKey('users.id'))
     comments = db.relationship('Comment', backref = 'pitch', lazy = 'dynamic')
 
-#     def save_pitch(self):
-#         """
-#         Method that saves a pitch to the database
-#         """
-#         db.session.add(self)
-#         db.session.commit()
+    def save_pitch(self):
+        """
+        Method that saves a pitch to the database
+        """
+        db.session.add(self)
+        db.session.commit()
 
 #     @classmethod
 #     def get_pitches(cls,category):
