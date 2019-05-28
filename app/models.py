@@ -58,11 +58,11 @@ class User(UserMixin, db.Model):
         user = User.query.filter_by(id = self.id).first()
         return user.pitches
 
-#     def __repr__(self):
-#         """
-#         Method used for debugging the database.
-#         """
-#         return f'User {self.username}'
+    def __repr__(self):
+        """
+        Method used for debugging the database.
+        """
+        return f'User {self.username}'
 
 # class Pitch(db.Model):
 #     """
