@@ -38,12 +38,12 @@ class User(UserMixin, db.Model):
         """
         raise AttributeError('You cannot read the password attribute')
 
-#     @password.setter
-#     def password(self, password):
-#         """
-#         Method that generates hashes for passwords.
-#         """
-#         self.pass_secure = generate_password_hash(password)
+    @password.setter
+    def password(self, password):
+        """
+        Method that generates hashes for passwords.
+        """
+        self.pass_secure = generate_password_hash(password)
 
 #     def verify_password(self, password):
 #         """
