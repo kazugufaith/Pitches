@@ -1,21 +1,21 @@
-# from flask import render_template, redirect, request, url_for, abort
-# from flask_login import login_required, current_user
-# from . import main
-# from .forms import UpdateProfile, AddPitch, CommentForm
-# from ..models import User, Pitch, Comment
-# from .. import db, photos
+from flask import render_template, redirect, request, url_for, abort
+from flask_login import login_required, current_user
+from . import main
+from .forms import UpdateProfile, AddPitch, CommentForm
+from ..models import User, Pitch, Comment
+from .. import db, photos
 
 
-# # Views
-# @main.route('/')
-# def index():
-#     """
-#     Function that renders the index.html file
-#     """
-#     pitches = Pitch.query.all()
-#     users = User.query.all()
-#     title = 'Welcome to pitches!'
-#     return render_template('index.html', title = title, pitches = pitches, users = users)
+# Views
+@main.route('/')
+def index():
+    """
+    Function that renders the index.html file
+    """
+    pitches = Pitch.query.all()
+    users = User.query.all()
+    title = 'Welcome to pitches!'
+    return render_template('index.html', title = title, pitches = pitches, users = users)
 
 # @main.route('/user/<uname>')
 # def profile(uname):
