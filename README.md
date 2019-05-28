@@ -24,7 +24,7 @@ This is an app that allows one to login and submit pitches, comment and like oth
 
 ### Clone the repo and checkout into the project folder.
 
-- `git clone 
+- `git clone https://github.com/kazugufaith/Pitches.git'
 - `cd pitch-app`
 
 ### Create and activate the virtual environment
