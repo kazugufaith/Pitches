@@ -10,33 +10,33 @@ def load_user(user_id):
     """
     return User.query.get(int(user_id))
 
-# class User(UserMixin, db.Model):
-#     """
-#     User model class to create users.
+class User(UserMixin, db.Model):
+    """
+    User model class to create users.
 
-#     Args:
-#         db.Model - connects our class to the database.
-#     """
-#     __tablename__ = 'users'
+    Args:
+        db.Model - connects our class to the database.
+    """
+    __tablename__ = 'users'
 
-#     id = db.Column(db.Integer, primary_key = True)
-#     firstname =db.Column(db.String(255))
-#     lastname =db.Column(db.String(255))
-#     username = db.Column(db.String(255),index =True)
-#     email = db.Column(db.String(255), unique = True, index = True)
-#     bio = db.Column(db.String(255))
-#     profile_pic_path = db.Column(db.String())
-#     pass_secure = db.Column(db.String(255))
+    id = db.Column(db.Integer, primary_key = True)
+    firstname =db.Column(db.String(255))
+    lastname =db.Column(db.String(255))
+    username = db.Column(db.String(255),index =True)
+    email = db.Column(db.String(255), unique = True, index = True)
+    bio = db.Column(db.String(255))
+    profile_pic_path = db.Column(db.String())
+    pass_secure = db.Column(db.String(255))
 
-#     pitches = db.relationship('Pitch', backref = 'user', lazy = 'dynamic')
-#     comments = db.relationship('Comment', backref = 'user', lazy = 'dynamic')
+    pitches = db.relationship('Pitch', backref = 'user', lazy = 'dynamic')
+    comments = db.relationship('Comment', backref = 'user', lazy = 'dynamic')
 
-#     @property
-#     def password(self):
-#         """
-#         Method that raises an error when a user tries to access the passwords.
-#         """
-#         raise AttributeError('You cannot read the password attribute')
+    @property
+    def password(self):
+        """
+        Method that raises an error when a user tries to access the passwords.
+        """
+        raise AttributeError('You cannot read the password attribute')
 
 #     @password.setter
 #     def password(self, password):
