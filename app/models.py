@@ -134,12 +134,12 @@ class Comment(db.Model):
     user_id = db.Column(db.Integer, db.ForeignKey('users.id'))
     pitch_id = db.Column(db.Integer, db.ForeignKey('pitches.id'))
 
-    # def save_comment(self):
-    #     db.session.add(self)
-    #     db.session.commit()
+    def save_comment(self):
+        db.session.add(self)
+        db.session.commit()
 
-    # def __repr__(self):
-    #     """
-    #     Method used for debugging the database.
-    #     """
-    #     return f'User {self.content}'
+    def __repr__(self):
+        """
+        Method used for debugging the database.
+        """
+        return f'User {self.content}'
