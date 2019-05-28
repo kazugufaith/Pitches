@@ -1,4 +1,4 @@
-<!-- # Pitch App
+# Pitch App
 
 ## Description
 
@@ -65,4 +65,4 @@ Email: faithmugesia@gmail.com
 
 ### License
 
-Copyright (c) 2019 **Faith Kazungu** -->
+Copyright (c) 2019 **Faith Kazungu**
