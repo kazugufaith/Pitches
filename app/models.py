@@ -51,12 +51,12 @@ class User(UserMixin, db.Model):
         """
         return check_password_hash(self.pass_secure, password)
 
-#     def get_pitches(self):
-#         """
-#         Method that gets all pitches for a particular user
-#         """
-#         user = User.query.filter_by(id = self.id).first()
-#         return user.pitches
+    def get_pitches(self):
+        """
+        Method that gets all pitches for a particular user
+        """
+        user = User.query.filter_by(id = self.id).first()
+        return user.pitches
 
 #     def __repr__(self):
 #         """
