@@ -120,26 +120,26 @@ class Pitch(db.Model):
         comments = Comment.query.filter_by(pitch_id = pitch.id).all()
         return comments
 
-# class Comment(db.Model):
-#     """
-#     Comment model class to create comments.
+class Comment(db.Model):
+    """
+    Comment model class to create comments.
 
-#     Args:
-#         db.Model - connects our class to the database.
-#     """
-#     __tablename__ = 'comments'
+    Args:
+        db.Model - connects our class to the database.
+    """
+    __tablename__ = 'comments'
 
-#     id = db.Column(db.Integer, primary_key = True)
-#     content = db.Column(db.String)
-#     user_id = db.Column(db.Integer, db.ForeignKey('users.id'))
-#     pitch_id = db.Column(db.Integer, db.ForeignKey('pitches.id'))
+    id = db.Column(db.Integer, primary_key = True)
+    content = db.Column(db.String)
+    user_id = db.Column(db.Integer, db.ForeignKey('users.id'))
+    pitch_id = db.Column(db.Integer, db.ForeignKey('pitches.id'))
 
-#     def save_comment(self):
-#         db.session.add(self)
-#         db.session.commit()
+    # def save_comment(self):
+    #     db.session.add(self)
+    #     db.session.commit()
 
-#     def __repr__(self):
-#         """
-#         Method used for debugging the database.
-#         """
-#         return f'User {self.content}'
+    # def __repr__(self):
+    #     """
+    #     Method used for debugging the database.
+    #     """
+    #     return f'User {self.content}'
