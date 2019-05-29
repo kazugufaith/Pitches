@@ -8,6 +8,8 @@ This is an app that allows one to login and submit pitches, comment and like oth
 #### By **Faith Kazungu**
 
 ## Link to live site
+https://faithpitch.herokuapp.com/
+
 
 
 
